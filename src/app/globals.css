@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(rgb(242, 247, 247), rgb(151, 151, 151)), fixed;
+}
+
+.app {
+    max-width: 1380px;
+    margin: 0 auto;
+}
