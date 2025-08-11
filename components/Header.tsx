@@ -2,7 +2,7 @@ import { GiMeal } from "react-icons/gi";
 import SearchBox from "./SearchBox";
 export default function Header() {
 	return (
-		<header>
+		<header className="absolute right-[10rem]">
 			<div>
 				<h1 className="font-semibold text-3xl mt-[-4rem] mb-2">
 					Welcome to <span className="text-amber-600">Flavora</span>
