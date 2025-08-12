@@ -22,11 +22,31 @@ body {
 
 
 .submit-btn:hover {
-    background-color: rgb(114, 11, 11);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
 .submit-btn:hover .search-icon {
+    font-size: large;
     transform: rotate(360deg);
-    transition: transform 0.5s ease;
+    transition: all 1s ease-in-out;
+    animation: none;
+}
+
+@keyframes fadeIn {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(-9px);
+
+        opacity: 1;
+    }
+}
+
+.scroll-btn {
+    animation: fadeIn 2.5s ease-in infinite;
 }

@@ -28,9 +28,9 @@ const MealCard = ({ meal }: Props) => {
 					{meal.strMeal} • {meal.strArea}
 				</p>
 				<button
-					title="See Details"
+					title={`See the details of ${meal.strMeal}`}
 					type="button"
-					className="bg-zinc-600 text-orange-300 text-sm rounded-2xl px-2 hover:bg-green-800">
+					className="bg-zinc-600 text-orange-300 text-sm rounded-2xl px-2 hover:bg-sky-700">
 					Details
 				</button>
 			</div>

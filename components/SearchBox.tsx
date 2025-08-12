@@ -1,4 +1,4 @@
-import { IoSearch } from "react-icons/io5";
+import { BsSearch } from "react-icons/bs";
 
 export default function SearchBox() {
 	return (
@@ -14,8 +14,8 @@ export default function SearchBox() {
 			<button
 				title="Search"
 				type="submit"
-				className="submit-btn bg-zinc-600 px-6 py-3 rounded-r-3xl text-white hover:bg-sky-800">
-				<IoSearch className="search-icon" />
+				className="submit-btn bg-zinc-700 px-6 py-3 rounded-r-3xl text-white hover:bg-zinc-600">
+				<BsSearch className="search-icon animate-pulse" />
 			</button>
 		</form>
 	);
