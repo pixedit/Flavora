@@ -1,6 +1,7 @@
 import Header from "../../components/Header";
 import MealsSection from "../../components/MealsSection";
 import ScrollButton from "../../components/ScrollButton";
+import SearchResults from "../../components/SearchResults";
 
 export default function page() {
 	return (
@@ -10,6 +11,7 @@ export default function page() {
 				<ScrollButton />
 			</section>
 			<div id="meals">
+				<SearchResults />
 				<MealsSection />
 			</div>
 		</div>
