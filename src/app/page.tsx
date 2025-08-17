@@ -10,10 +10,12 @@ export default function page() {
 				<Header />
 				<ScrollButton />
 			</section>
-			<div id="meals">
+			<section id="search-results" className="py-12">
 				<SearchResults />
+			</section>
+			<section id="meals" className="py-12">
 				<MealsSection />
-			</div>
+			</section>
 		</div>
 	);
 }

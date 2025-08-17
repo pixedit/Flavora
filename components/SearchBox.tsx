@@ -36,7 +36,7 @@ const SearchBox = () => {
 				title="Search"
 				type="submit"
 				className="submit-btn bg-zinc-700 px-6 py-3 rounded-r-3xl text-white hover:bg-zinc-600">
-				<BsSearch className="search-icon animate-pulse" />
+				<BsSearch className="search-icon animate-pulse cursor-pointer" />
 			</button>
 		</form>
 	);
