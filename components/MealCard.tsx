@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Meal } from "../types";
+import Link from "next/link";
 
 interface Props {
 	meal: Meal;
@@ -19,7 +20,7 @@ const MealCard = ({ meal }: Props) => {
 						priority
 					/>
 				)}
-				<h3 className="text-[16px] text-black font-semibold absolute top-0 px-2 py-1 rounded-br-2xl bg-amber-500">
+				<h3 className="text-[16px] text-black font-semibold absolute top-0 right-0 px-2 py-1 rounded-bl-2xl bg-amber-500">
 					{meal.strCategory}
 				</h3>
 			</div>
@@ -27,12 +28,12 @@ const MealCard = ({ meal }: Props) => {
 				<p className="text-sm text-gray-200 mr-auto">
 					{meal.strMeal} • {meal.strArea}
 				</p>
-				<button
+				<Link
+					href={`details/${meal.idMeal}`}
 					title={`See the details of ${meal.strMeal}`}
-					type="button"
 					className="bg-zinc-600 text-orange-300 text-sm rounded-2xl px-2 hover:bg-sky-700">
 					Details
-				</button>
+				</Link>
 			</div>
 		</div>
 	);

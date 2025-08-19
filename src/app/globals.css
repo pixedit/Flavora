@@ -50,3 +50,14 @@ body {
 .scroll-btn {
     animation: fadeIn 2.5s ease-in infinite;
 }
+
+dl div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: large;
+}
+
+dl dt {
+    font-size: 22px;
+}

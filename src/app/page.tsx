@@ -5,7 +5,7 @@ import SearchResults from "../../components/SearchResults";
 
 export default function page() {
 	return (
-		<div className="app">
+		<main className="app">
 			<section className="flex items-center justify-center relative h-dvh">
 				<Header />
 				<ScrollButton />
@@ -16,6 +16,6 @@ export default function page() {
 			<section id="meals" className="py-12">
 				<MealsSection />
 			</section>
-		</div>
+		</main>
 	);
 }

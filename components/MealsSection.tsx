@@ -15,7 +15,12 @@ export default function MealsSection() {
 	}, []);
 
 	if (error) return <p>Could not fetch meals. Check your connection.</p>;
-	if (!meals.length) return <p>Loading...</p>;
+	if (!meals.length)
+		return (
+			<p className="text-center text-2xl text-gray-800 font-semibold animate-pulse">
+				Loading... <span className="text-sm">Please wait</span>
+			</p>
+		);
 
 	return (
 		<main className="p-6" id="meals">

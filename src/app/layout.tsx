@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { SearchProvider } from "../../context/SearchContext";
+import Footer from "../../components/Footer";
 
 export const metadata: Metadata = {
 	title: "Flavora",
@@ -15,7 +16,12 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-				<SearchProvider>{children}</SearchProvider>
+				<SearchProvider>
+					<div className="flex flex-col min-h-screen">
+						<main className="flex-grow">{children}</main>
+						<Footer />
+					</div>
+				</SearchProvider>
 			</body>
 		</html>
 	);
