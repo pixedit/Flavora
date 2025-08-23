@@ -1,23 +1,26 @@
 "use client";
+// React and Next
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { fetchMealDetails } from "../../../../lib/api";
-import LoadingOverlay from "../../../../components/LoadingOverlay";
+import Image from "next/image";
+import Link from "next/link";
+
+// Components, Types, API
 import ErrorMessage from "../../../../components/ErrorMessage";
 import { Meal } from "../../../../types";
-import Image from "next/image";
+import LoadingOverlay from "../../../../components/LoadingOverlay";
+import { fetchMealDetails } from "../../../../lib/api";
+
+// Icons
 import { TbCategory } from "react-icons/tb";
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot, FaTags } from "react-icons/fa6";
 import { BsBrowserEdge } from "react-icons/bs";
-import { FaTags } from "react-icons/fa6";
 import { GiMeal } from "react-icons/gi";
 import { FaYoutube } from "react-icons/fa";
-import Link from "next/link";
 
 const RecipeDetailPage = () => {
 	const { id } = useParams();
 	const [meal, setMeal] = useState<Meal | null>(null);
-
 	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
@@ -40,6 +43,10 @@ const RecipeDetailPage = () => {
 	if (loading) return <LoadingOverlay />;
 	if (!meal) return <ErrorMessage message="No meal detail found." />;
 
+	// ℹ️ Note!
+	// Extract ingredient/measure pairs from the meal object.
+	// Keys follow the pattern "strIngredient1", "strMeasure1", etc.
+	// This logic transforms them into a cleaner array of { ingredient, measure } objects.
 	const ingredientPairs = Object.entries(meal)
 		.filter(([key, value]) => key.startsWith("strIngredient") && value?.trim())
 		.map(([key, value]) => {
@@ -88,7 +95,7 @@ const RecipeDetailPage = () => {
 										<dt className="text-sky-700">
 											<FaTags />
 										</dt>
-										<dd>{meal.strTags}</dd>
+										<dd>{meal.strTags.split(",").slice(0, 4).join(", ")}</dd>
 									</div>
 								)}
 								{meal.strSource && (

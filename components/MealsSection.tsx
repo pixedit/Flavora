@@ -9,9 +9,15 @@ export default function MealsSection() {
 	const [error, setError] = useState(false);
 	const limitedMeals = meals.slice(0, 11);
 	useEffect(() => {
-		fetchMeals()
-			.then(setMeals)
-			.catch(() => setError(true));
+		const loadMeals = async () => {
+			try {
+				const data = await fetchMeals();
+				setMeals(data);
+			} catch {
+				setError(true);
+			}
+		};
+		loadMeals();
 	}, []);
 
 	if (error) return <p>Could not fetch meals. Check your connection.</p>;

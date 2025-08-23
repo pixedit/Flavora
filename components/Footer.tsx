@@ -87,7 +87,7 @@ const Footer = () => {
 					</p>
 					<p className="max-w-md mb-4">
 						This app is a personal project built for practice and learning
-						purposes. Flavora is built with{" "}
+						purposes. Flavora is powered by{" "}
 						<Link
 							href="https://www.themealdb.com"
 							target="_blank"
@@ -95,7 +95,7 @@ const Footer = () => {
 							aria-label="TheMealDB.com">
 							TheMealDB
 						</Link>{" "}
-						API that offers free access to many recipes.
+						API which offers free access to many recipes.
 					</p>
 					<h3 className="text-[22px] text-white mt-6 mb-2">
 						Technologies used

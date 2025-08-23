@@ -4,7 +4,7 @@ import { SearchProvider } from "../../context/SearchContext";
 import Footer from "../../components/Footer";
 
 export const metadata: Metadata = {
-	title: "Flavora",
+	title: "Flavora | Your Recipe Finder",
 	description: "Find new recipes instantly from around the world",
 };
 
