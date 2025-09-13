@@ -8,7 +8,7 @@ interface Props {
 
 const MealCard = ({ meal }: Props) => {
 	return (
-		<div className="text-gray-300 rounded-lg shadow-md overflow-hidden bg-stone-800">
+		<div className="text-gray-300 rounded-lg shadow-md overflow-hidden bg-gray-800">
 			<div className="relative">
 				{meal.strMealThumb && (
 					<Image

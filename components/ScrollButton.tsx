@@ -8,7 +8,7 @@ export default function ScrollButton() {
 			title="Tap to scroll down"
 			type="button"
 			onClick={() => scrollToMeals("meals")}
-			className="scroll-btn outline-none absolute bottom-19 left-1/2 transform -translate-x-1/2 text-3xl bg-stone-500 text-white rounded-full p-2 hover:text-stone-400 transition duration-300 cursor-pointer">
+			className="scroll-btn outline-none absolute bottom-19 left-1/2 transform -translate-x-1/2 text-3xl bg-amber-500 text-white rounded-full p-2 hover:scale-110 hover:text-stone-800 transition duration-300 cursor-pointer">
 			<FaCircleArrowDown />
 		</button>
 	);

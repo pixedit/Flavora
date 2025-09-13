@@ -18,3 +18,15 @@ export interface Meal {
 	[key: `strMeasure${number}`]: string | null | undefined;
 	[key: string]: any;
 }
+
+export interface SharedMeal {
+	name: string;
+	category: string;
+	instructions: string;
+	ingredient: string;
+	measure: string;
+	owner: string;
+	imageUrl: string;
+	createdAt: string;
+	id: string;
+}

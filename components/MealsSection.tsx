@@ -30,7 +30,7 @@ export default function MealsSection() {
 
 	return (
 		<main className="p-6" id="meals">
-			<h2 className="text-2xl font-semibold mb-6">Tasty Picks</h2>
+			<h2 className="text-2xl text-white font-semibold mb-6">Tasty Picks</h2>
 			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 				{limitedMeals.map((meal) => (
 					<MealCard key={meal.idMeal} meal={meal} />

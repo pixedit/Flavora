@@ -87,7 +87,7 @@ const Footer = () => {
 					</p>
 					<p className="max-w-md mb-4">
 						This app is a personal project built for practice and learning
-						purposes. Flavora is powered by{" "}
+						purposes. It is powered by{" "}
 						<Link
 							href="https://www.themealdb.com"
 							target="_blank"
@@ -106,6 +106,7 @@ const Footer = () => {
 						<li>Tailwind CSS</li>
 						<li>React 19.1.0</li>
 						<li>React Icons</li>
+						<li>MongoDb</li>
 					</ul>
 				</div>
 			</div>
