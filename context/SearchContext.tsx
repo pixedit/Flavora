@@ -2,7 +2,7 @@
 import { createContext, useContext, useState, ReactNode } from "react";
 import { fetchMealBySearch } from "../lib/api";
 import { Meal } from "../types";
-import { scrollToMeals } from "../lib/constants";
+import { scrollToMeals } from "@/lib/constants";
 
 type SearchContextType = {
 	meals: Meal[];

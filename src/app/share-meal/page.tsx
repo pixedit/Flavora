@@ -1,7 +1,7 @@
 "use client";
+
 const ShareMealPage = () => {
 	const inputStyle = "w-full p-2 mt-2 rounded-lg outline-none bg-stone-500";
-
 	return (
 		<div className="max-w-2xl mx-auto p-8 bg-stone-700 rounded-2xl my-[4rem] text-white">
 			<h2 className="text-2xl font-semibold mb-6 text-orange-300">

@@ -1,8 +1,8 @@
-import Header from "../../components/Header";
-import MealsSection from "../../components/MealsSection";
-import ScrollButton from "../../components/ScrollButton";
-import SearchResults from "../../components/SearchResults";
-import HeaderBackground from "../../components/HeaderBackground";
+import Header from "@/components/Header";
+import MealsSection from "@/components/MealsSection";
+import ScrollButton from "@/components/ScrollButton";
+import SearchResults from "@/components/SearchResults";
+import HeaderBackground from "@/components/HeaderBackground";
 
 export default function page() {
 	return (

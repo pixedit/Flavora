@@ -1,23 +1,21 @@
-import { MongoClient } from "mongodb";
+import mongoose from "mongoose";
 
-const uri = process.env.MONGODB_URI!;
-const options = {};
+let isConnected = false;
 
-let clientPromise: Promise<MongoClient>;
+export async function connectDB() {
+	mongoose.set("strictQuery", true);
 
-// Extend global type to include our custom property
-declare global {
-	var _mongoClientPromise: Promise<MongoClient> | undefined;
-}
-
-// Reuse client in development to avoid creating multiple connections
-if (process.env.NODE_ENV === "development") {
-	if (!global._mongoClientPromise) {
-		global._mongoClientPromise = new MongoClient(uri, options).connect();
+	// if it's connected, don't connect again
+	if (isConnected) {
+		console.log("MongoDB is connected");
+		return;
 	}
-	clientPromise = global._mongoClientPromise;
-} else {
-	clientPromise = new MongoClient(uri, options).connect();
-}
 
-export default clientPromise;
+	try {
+		await mongoose.connect(process.env.MONGODB_URI as string);
+		isConnected = true;
+		console.log("connected to MongoDB");
+	} catch (error) {
+		console.log("MongoDB connection error", error);
+	}
+}

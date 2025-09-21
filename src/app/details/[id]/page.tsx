@@ -6,10 +6,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Components, Types, API
-import ErrorMessage from "../../../../components/ErrorMessage";
-import { Meal } from "../../../../types";
-import LoadingOverlay from "../../../../components/LoadingOverlay";
-import { fetchMealDetails } from "../../../../lib/api";
+import ErrorMessage from "@/components/ErrorMessage";
+import { Meal } from "@/types";
+import LoadingOverlay from "@/components/LoadingOverlay";
+import { fetchMealDetails } from "@/lib/api";
 
 // Icons
 import { TbCategory } from "react-icons/tb";

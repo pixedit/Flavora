@@ -1,6 +1,6 @@
 "use client";
 import { FaCircleArrowDown } from "react-icons/fa6";
-import { scrollToMeals } from "../lib/constants";
+import { scrollToMeals } from "@/lib/constants";
 
 export default function ScrollButton() {
 	return (

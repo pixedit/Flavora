@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { fetchMeals } from "../lib/api";
+import { fetchMeals } from "@/lib/api";
 import MealCard from "./MealCard";
 import { Meal } from "../types";
 

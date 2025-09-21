@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { SearchProvider } from "../../context/SearchContext";
-import Footer from "../../components/Footer";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
 	title: "Flavora | Your Recipe Finder",

@@ -10,11 +10,11 @@ export default function Header() {
 					</h1>
 					<h3 className="ml-[-2rem] flex items-center gap-x-1.5 mt-3">
 						Your Recipe Finder{" "}
-						<span className="text-cyan-700 animate-bounce text-[20px]">
+						<span className="text-amber-500 animate-bounce text-[20px]">
 							<GiMeal />
 						</span>
 					</h3>
-					<p className="ml-[2rem] font-semibold text-cyan-400">
+					<p className="ml-[2rem] font-semibold text-violet-300">
 						Discover new Recipes instantly from around the World
 					</p>
 				</div>
