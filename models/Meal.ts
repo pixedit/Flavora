@@ -11,7 +11,7 @@ const MealSchema = new Schema(
 				measure: { type: String },
 			},
 		],
-		owner: { type: String }, // optional
+		owner: { type: String },
 		image: { type: String },
 		createdBy: { type: Schema.Types.ObjectId, ref: "User" },
 	},
